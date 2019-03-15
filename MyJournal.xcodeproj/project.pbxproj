@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0677C91F22350C01000BC308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677C91E22350C01000BC308 /* AppDelegate.swift */; };
-		0677C92122350C01000BC308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677C92022350C01000BC308 /* ViewController.swift */; };
 		0677C92422350C01000BC308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0677C92222350C01000BC308 /* Main.storyboard */; };
 		0677C92722350C01000BC308 /* MyJournal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0677C92522350C01000BC308 /* MyJournal.xcdatamodeld */; };
 		0677C92922350C03000BC308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0677C92822350C03000BC308 /* Assets.xcassets */; };
 		0677C92C22350C03000BC308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0677C92A22350C03000BC308 /* LaunchScreen.storyboard */; };
 		0677C93722350C03000BC308 /* MyJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677C93622350C03000BC308 /* MyJournalTests.swift */; };
 		0677C94222350C03000BC308 /* MyJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677C94122350C03000BC308 /* MyJournalUITests.swift */; };
+		06A27C2A22368ABD00A0B5EF /* DisplayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A27C2922368ABD00A0B5EF /* DisplayTableViewController.swift */; };
+		06F064F9223BCBB300B57528 /* addItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F064F8223BCBB300B57528 /* addItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		0677C91B22350C01000BC308 /* MyJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0677C91E22350C01000BC308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0677C92022350C01000BC308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0677C92322350C01000BC308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0677C92622350C01000BC308 /* MyJournal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyJournal.xcdatamodel; sourceTree = "<group>"; };
 		0677C92822350C03000BC308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		0677C93D22350C03000BC308 /* MyJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0677C94122350C03000BC308 /* MyJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJournalUITests.swift; sourceTree = "<group>"; };
 		0677C94322350C03000BC308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06A27C2922368ABD00A0B5EF /* DisplayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTableViewController.swift; sourceTree = "<group>"; };
+		06F064F8223BCBB300B57528 /* addItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				0677C91E22350C01000BC308 /* AppDelegate.swift */,
-				0677C92022350C01000BC308 /* ViewController.swift */,
+				06F064F8223BCBB300B57528 /* addItemViewController.swift */,
+				06A27C2922368ABD00A0B5EF /* DisplayTableViewController.swift */,
 				0677C92222350C01000BC308 /* Main.storyboard */,
 				0677C92822350C03000BC308 /* Assets.xcassets */,
 				0677C92A22350C03000BC308 /* LaunchScreen.storyboard */,
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A27C2A22368ABD00A0B5EF /* DisplayTableViewController.swift in Sources */,
+				06F064F9223BCBB300B57528 /* addItemViewController.swift in Sources */,
 				0677C92722350C01000BC308 /* MyJournal.xcdatamodeld in Sources */,
-				0677C92122350C01000BC308 /* ViewController.swift in Sources */,
 				0677C91F22350C01000BC308 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
