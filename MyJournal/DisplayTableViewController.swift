@@ -21,7 +21,6 @@ class DisplayTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 44
         self.tableView.rowHeight = UITableView.automaticDimension
         
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,7 +31,6 @@ class DisplayTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
     }
-    
     
     func fetchData() {
         
@@ -56,7 +54,16 @@ extension DisplayTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         
+        let date = items.reversed()[indexPath.row].date
+        let time = items.reversed()[indexPath.row].time
+        
         cell.textLabel?.text = items.reversed()[indexPath.row].name
+        
+        if let date = date, let time = time {
+            let timeStamp = "Added on \(date) at \(time)"
+            cell.detailTextLabel?.text = timeStamp
+            
+        }
         
         return cell
     }

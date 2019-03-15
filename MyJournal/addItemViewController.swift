@@ -37,6 +37,15 @@ class addItemViewController: UIViewController, UITextViewDelegate {
             
         } else {
             
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM/dd/YY"
+            let currentDate = formatter.string(from: date)
+            
+            let timeFormatter = DateFormatter()
+            timeFormatter.timeStyle = .short
+            let currentTime = timeFormatter.string(from: date)
+            
             guard let entryText = itemEntryTextView?.text else {
                 return
             }
@@ -45,6 +54,8 @@ class addItemViewController: UIViewController, UITextViewDelegate {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             let newEntry = Item(context: context)
             newEntry.name = entryText
+            newEntry.date = currentDate
+            newEntry.time = currentTime
             
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
