@@ -66,5 +66,24 @@ extension DisplayTableViewController {
         return items.count
         
     }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
+            
+            let item = self.items[indexPath.row]
+            self.context.delete(item)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            self.items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+        
+        delete.backgroundColor = UIColor(red: 193/255, green: 21/255, blue: 148/255, alpha: 1.0)
+        
+        return [delete]
+        
+    }
 }
 
